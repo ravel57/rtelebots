@@ -243,9 +243,9 @@ bot.removeGetUpdatesListener();
 Все типы такие же, как и оригинальные.
 Поля типов - методы в нижнем CamelCase.
 
-Типы, используемые в ответах **(Update, Message, User, Document...)**, расположены в пакете `com.pengrad.telegrambot.model`.
+Типы, используемые в ответах **(Update, Message, User, Document...)**, расположены в пакете `ru.ravel.rtelebots.model`.
 
-Типы, используемые в запросах **(Keyboard, InlineQueryResult, ParseMode, InputMessageContent...)**, расположены в пакете `com.pengrad.telegrambot.model.request`.
+Типы, используемые в запросах **(Keyboard, InlineQueryResult, ParseMode, InputMessageContent...)**, расположены в пакете `ru.ravel.rtelebots.model.request`.
 При создании пользовательского типа для использования в запросах обязательные параметры должны быть переданы в конструкторе, необязательные параметры могут быть добавлены в цепочках.
 
 #### Клавиатуры
@@ -341,14 +341,14 @@ ParseMode parseMode = ParseMode.HTML;
 GetFile request = new GetFile("fileId")
 GetFileResponse getFileResponse = bot.execute(request);
 
-File file = getFileResponse.file(); // com.pengrad.telegrambot.model.File
+File file = getFileResponse.file(); // ru.ravel.rtelebots.model.File
 file.fileId();
 file.filePath();  // относительный путь
 file.fileSize();
 ```
 Для получения ссылки на скачивание вида: `https://api.telegram.org/file/bot<token>/<file_path>`
 ```java
-String fullPath = bot.getFullFilePath(file);  // com.pengrad.telegrambot.model.File
+String fullPath = bot.getFullFilePath(file);  // ru.ravel.rtelebots.model.File
 ```
 
 #### Другие запросы

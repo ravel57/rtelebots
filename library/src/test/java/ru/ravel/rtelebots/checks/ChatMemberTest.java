@@ -1,0 +1,20 @@
+package ru.ravel.rtelebots.checks;
+
+import ru.ravel.rtelebots.model.ChatMember;
+
+import static org.junit.Assert.assertNotNull;
+
+/**
+ * Stas Parshin
+ * 29 May 2016
+ */
+public class ChatMemberTest {
+
+	public static void check(ChatMember chatMember) {
+		assertNotNull(chatMember.user());
+		assertNotNull(chatMember.status());
+		UserTest.checkUser(chatMember.user(), chatMember.status() == ChatMember.Status.creator);
+	}
+
+
+}

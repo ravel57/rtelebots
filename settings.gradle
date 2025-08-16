@@ -1,4 +1,4 @@
-rootProject.name = 'java-telegram-bot-api'
+rootProject.name = 'rtelebots'
 
 include 'library'
 include 'sample'

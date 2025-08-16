@@ -1,7 +1,7 @@
 # Java Telegram Bot API
 
-[![Maven Central](https://img.shields.io/maven-central/v/com.github.pengrad/java-telegram-bot-api.svg)](https://search.maven.org/artifact/com.github.pengrad/java-telegram-bot-api)
-[![codecov](https://codecov.io/gh/pengrad/java-telegram-bot-api/branch/master/graph/badge.svg)](https://codecov.io/gh/pengrad/java-telegram-bot-api)
+[![Maven Central](https://img.shields.io/maven-central/v/com.github.ravel57/rtelebots.svg)](https://search.maven.org/artifact/com.github.ravel57/rtelebots)
+[![codecov](https://codecov.io/gh/ravel57/rtelebots/branch/master/graph/badge.svg)](https://codecov.io/gh/pengrad/java-telegram-bot-api)
 
 Java library for interacting with [Telegram Bot API](https://core.telegram.org/bots/api)
 - Full support of all Bot API 9.0 methods
@@ -239,9 +239,9 @@ bot.removeGetUpdatesListener();
 All types have the same name as original ones.  
 Type's fields are methods in lowerCamelCase.
 
-Types used in responses **(Update, Message, User, Document...)** are in `com.pengrad.telegrambot.model` package. 
+Types used in responses **(Update, Message, User, Document...)** are in `ru.ravel.rtelebots.model` package. 
 
-Types used in requests **(Keyboard, InlineQueryResult, ParseMode, InputMessageContent...)** are in `com.pengrad.telegrambot.model.request` package.  
+Types used in requests **(Keyboard, InlineQueryResult, ParseMode, InputMessageContent...)** are in `ru.ravel.rtelebots.model.request` package.  
 When creating a request's type, required params should be passed in the constructor, optional params can be added in chains.
 
 #### Keyboards
@@ -341,14 +341,14 @@ ParseMode parseMode = ParseMode.HTML;
 GetFile request = new GetFile("fileId")
 GetFileResponse getFileResponse = bot.execute(request);
 
-File file = getFileResponse.file(); // com.pengrad.telegrambot.model.File
+File file = getFileResponse.file(); // ru.ravel.rtelebots.model.File
 file.fileId();
 file.filePath();  // relative path
 file.fileSize();
 ```
 To get downloading link as `https://api.telegram.org/file/<BOT_TOKEN>/<FILE_PATH>`
 ```java
-String fullPath = bot.getFullFilePath(file);  // com.pengrad.telegrambot.model.File
+String fullPath = bot.getFullFilePath(file);  // ru.ravel.rtelebots.model.File
 ```
 
 #### Other requests

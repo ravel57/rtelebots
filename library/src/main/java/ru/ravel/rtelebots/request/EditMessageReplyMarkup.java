@@ -1,0 +1,31 @@
+package ru.ravel.rtelebots.request;
+
+import ru.ravel.rtelebots.model.request.InlineKeyboardMarkup;
+import ru.ravel.rtelebots.response.BaseResponse;
+import ru.ravel.rtelebots.response.SendResponse;
+
+/**
+ * Stas Parshin
+ * 07 May 2016
+ */
+public class EditMessageReplyMarkup extends BaseRequest<EditMessageReplyMarkup, BaseResponse> {
+
+	public EditMessageReplyMarkup(Object chatId, int messageId) {
+		super(SendResponse.class);
+		add("chat_id", chatId).add("message_id", messageId);
+	}
+
+	public EditMessageReplyMarkup(String inlineMessageId) {
+		super(BaseResponse.class);
+		add("inline_message_id", inlineMessageId);
+	}
+
+	public EditMessageReplyMarkup replyMarkup(InlineKeyboardMarkup replyMarkup) {
+		return add("reply_markup", replyMarkup);
+	}
+
+	public EditMessageReplyMarkup businessConnectionId(String businessConnectionId) {
+		return add("business_connection_id", businessConnectionId);
+	}
+
+}

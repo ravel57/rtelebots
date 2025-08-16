@@ -8,11 +8,11 @@
   <!-- do_not_remove: published-with-gradle-metadata -->
   <modelVersion>4.0.0</modelVersion>
   <groupId>com.github.pengrad</groupId>
-  <artifactId>java-telegram-bot-api</artifactId>
+  <artifactId>rtelebots</artifactId>
   <version>9.0.0</version>
-  <name>JavaTelegramBotApi</name>
+  <name>rTeleBots</name>
   <description>Java API for Telegram Bot API</description>
-  <url>https://github.com/pengrad/java-telegram-bot-api/</url>
+  <url>https://github.com/ravel57/rtelebots/</url>
   <licenses>
     <license>
       <name>The Apache Software License, Version 2.0</name>
@@ -27,9 +27,9 @@
     </developer>
   </developers>
   <scm>
-    <connection>scm:git:git://github.com/pengrad/java-telegram-bot-api.git</connection>
-    <developerConnection>scm:git:git://github.com/pengrad/java-telegram-bot-api.git</developerConnection>
-    <url>https://github.com/pengrad/java-telegram-bot-api/</url>
+    <connection>scm:git:git://github.com/ravel57/rtelebots.git</connection>
+    <developerConnection>scm:git:git://github.com/ravel57/rtelebots.git</developerConnection>
+    <url>https://github.com/ravel57/rtelebots</url>
   </scm>
   <dependencies>
     <dependency>
