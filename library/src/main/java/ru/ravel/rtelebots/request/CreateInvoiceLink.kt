@@ -10,14 +10,14 @@ class CreateInvoiceLink(
 	description: String,
 	payload: String,
 	currency: String,
-	vararg prices: _root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice
-) : KBaseRequest<CreateInvoiceLink, _root_ide_package_.ru.ravel.rtelebots.response.StringResponse>(_root_ide_package_.ru.ravel.rtelebots.response.StringResponse::class) {
+	vararg prices: LabeledPrice
+) : KBaseRequest<CreateInvoiceLink, StringResponse>(StringResponse::class) {
 
 	val title: String by requestParameter(title)
 	val description: String by requestParameter(description)
 	val payload: String by requestParameter(payload)
 	val currency: String by requestParameter(currency)
-	val prices: Array<_root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice> by requestParameter(arrayOf(*prices))
+	val prices: Array<LabeledPrice> by requestParameter(arrayOf(*prices))
 
 	var providerToken: String? by optionalRequestParameter()
 	var subscriptionPeriod: Int? by optionalRequestParameter()

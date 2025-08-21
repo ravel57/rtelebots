@@ -9,7 +9,7 @@ class SetBusinessAccountName private constructor(
 	businessConnectionId: String,
 	firstName: String,
 	lastName: String?
-) : KBaseRequest<SetBusinessAccountName, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<SetBusinessAccountName, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(businessConnectionId: String, firstName: String) : this(
 		businessConnectionId = businessConnectionId,

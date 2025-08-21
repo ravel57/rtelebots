@@ -10,8 +10,8 @@ data class Video(
 	@get:JvmSynthetic val height: Int,
 	@get:JvmSynthetic val duration: Int,
 
-	@get:JvmName("thumbnail") val thumbnail: _root_ide_package_.ru.ravel.rtelebots.model.PhotoSize? = null,
-	@get:JvmName("cover") val cover: List<_root_ide_package_.ru.ravel.rtelebots.model.PhotoSize>? = null,
+	@get:JvmName("thumbnail") val thumbnail: PhotoSize? = null,
+	@get:JvmName("cover") val cover: List<PhotoSize>? = null,
 
 	@get:JvmName("startTimestamp") val startTimestamp: Int? = null,
 

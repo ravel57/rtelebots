@@ -9,8 +9,8 @@ import java.io.Serializable;
 public class InlineQueryResultCachedVideo extends InlineQueryResult<InlineQueryResultCachedVideo> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String video_file_id;
-	private String title;
+	private final String video_file_id;
+	private final String title;
 
 	private String description;
 	private String caption;

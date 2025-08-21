@@ -9,9 +9,9 @@ import java.io.Serializable;
 public class InlineQueryResultLocation extends InlineQueryResult<InlineQueryResultLocation> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private float latitude;
-	private float longitude;
-	private String title;
+	private final float latitude;
+	private final float longitude;
+	private final String title;
 
 	private Float horizontal_accuracy;
 	private Integer live_period;

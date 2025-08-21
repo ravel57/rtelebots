@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class LoginUrl implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String url;
+	private final String url;
 	private String forward_text;
 	private String bot_username;
 	private Boolean request_write_access;

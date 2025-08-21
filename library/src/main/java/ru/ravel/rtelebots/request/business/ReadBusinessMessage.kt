@@ -7,7 +7,7 @@ class ReadBusinessMessage(
 	businessConnectionId: String,
 	chatId: Long,
 	messageId: Int
-) : KBaseRequest<ReadBusinessMessage, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<ReadBusinessMessage, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	val businessConnectionId: String by requestParameter(businessConnectionId, customParameterName = "business_connection_id")
 	val chatId: Long by requestParameter(chatId, customParameterName = "chat_id")

@@ -12,9 +12,9 @@ public class InlineQueryResultDocument extends InlineQueryResult<InlineQueryResu
 	public static final String MIME_APP_PDFL = "application/pdf";
 	public static final String MIME_APP_ZIP = "application/zip";
 
-	private String title;
-	private String document_url;
-	private String mime_type;
+	private final String title;
+	private final String document_url;
+	private final String mime_type;
 
 	private String caption;
 	private String parse_mode;

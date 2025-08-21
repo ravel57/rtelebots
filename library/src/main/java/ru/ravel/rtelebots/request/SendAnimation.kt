@@ -20,8 +20,8 @@ class SendAnimation private constructor(
 	contentFile = animationFile,
 	contentBytes = animationBytes,
 
-	defaultFileName = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.GIF_FILE_NAME,
-	defaultContentType = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.GIF_MIME_TYPE
+	defaultFileName = ContentTypes.GIF_FILE_NAME,
+	defaultContentType = ContentTypes.GIF_MIME_TYPE
 ) {
 
 
@@ -92,8 +92,8 @@ class SendAnimation private constructor(
 	}
 
 	var caption: String? by optionalRequestParameter()
-	var parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
-	var captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var parseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
+	var captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
 	var showCaptionAboveMedia: Boolean? by optionalRequestParameter()
 	var hasSpoiler: Boolean? by optionalRequestParameter()
 
@@ -103,12 +103,12 @@ class SendAnimation private constructor(
 
 	fun caption(caption: String) = apply { this.caption = caption }
 
-	fun parseMode(parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) = apply { this.parseMode = parseMode }
+	fun parseMode(parseMode: ru.ravel.rtelebots.model.request.ParseMode) = apply { this.parseMode = parseMode }
 
-	fun captionEntities(captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun captionEntities(captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>) =
 		apply { this.captionEntities = captionEntities }
 
-	fun captionEntities(vararg captionEntities: _root_ide_package_.ru.ravel.rtelebots.model.MessageEntity) =
+	fun captionEntities(vararg captionEntities: ru.ravel.rtelebots.model.MessageEntity) =
 		apply { this.captionEntities = captionEntities.toList() }
 
 	fun showCaptionAboveMedia(showCaptionAboveMedia: Boolean) = apply { this.showCaptionAboveMedia = showCaptionAboveMedia }

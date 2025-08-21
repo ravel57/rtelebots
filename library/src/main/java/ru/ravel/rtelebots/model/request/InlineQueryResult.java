@@ -14,8 +14,8 @@ public abstract class InlineQueryResult<T extends InlineQueryResult<T>> implemen
 	@SuppressWarnings("unchecked")
 	private final T thisAsT = (T) this;
 
-	private String type;
-	private String id;
+	private final String type;
+	private final String id;
 	private MessageEntity[] caption_entities;
 	private InputMessageContent input_message_content;
 	private InlineKeyboardMarkup reply_markup;

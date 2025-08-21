@@ -2,9 +2,9 @@ package ru.ravel.rtelebots.request
 
 import kotlin.reflect.KClass
 
-abstract class KBaseRequest<T : _root_ide_package_.ru.ravel.rtelebots.request.BaseRequest<T, R>, R : _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(
+abstract class KBaseRequest<T : BaseRequest<T, R>, R : ru.ravel.rtelebots.response.BaseResponse>(
 	clazz: KClass<R>
-) : _root_ide_package_.ru.ravel.rtelebots.request.BaseRequest<T, R>(clazz.java) {
+) : BaseRequest<T, R>(clazz.java) {
 
 	@Suppress("UNCHECKED_CAST", "MemberVisibilityCanBePrivate")
 	protected val self by lazy { this as T }

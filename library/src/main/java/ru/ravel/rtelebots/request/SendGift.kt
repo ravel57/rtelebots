@@ -8,7 +8,7 @@ class SendGift private constructor(
 	chatId: Long? = null,
 	channelUsername: String? = null,
 	giftId: String,
-) : KBaseRequest<SendGift, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<SendGift, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	companion object {
 
@@ -70,15 +70,15 @@ class SendGift private constructor(
 	var payForUpgrade: Boolean? by optionalRequestParameter()
 
 	var text: String? by optionalRequestParameter()
-	var textParseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter(valueMapper = { it?.name })
-	var textEntities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var textParseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter(valueMapper = { it?.name })
+	var textEntities: Array<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
 
 	fun text(text: String) = apply { this.text = text }
 
-	fun textParseMode(parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) =
+	fun textParseMode(parseMode: ru.ravel.rtelebots.model.request.ParseMode) =
 		apply { this.textParseMode = parseMode }
 
-	fun textEntities(textEntities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun textEntities(textEntities: Array<ru.ravel.rtelebots.model.MessageEntity>) =
 		apply { this.textEntities = textEntities }
 
 }

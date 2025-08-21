@@ -7,7 +7,7 @@ package ru.ravel.rtelebots.passport;
 public class PassportElementErrorUnspecified extends PassportElementError {
 	private final static long serialVersionUID = 0L;
 
-	private String element_hash;
+	private final String element_hash;
 
 	public PassportElementErrorUnspecified(String type, String elementHash, String message) {
 		super("unspecified", type, message);

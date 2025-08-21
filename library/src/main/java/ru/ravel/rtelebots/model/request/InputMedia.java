@@ -27,7 +27,7 @@ abstract public class InputMedia<T extends InputMedia<T>> implements Serializabl
 	private String parse_mode;
 	private MessageEntity[] caption_entities;
 
-	transient private Map<String, Object> attachments = new HashMap<>();
+	final transient private Map<String, Object> attachments = new HashMap<>();
 	transient private InputFile inputFile;
 	transient private String inputFileAttachId;
 	transient private String fileName;

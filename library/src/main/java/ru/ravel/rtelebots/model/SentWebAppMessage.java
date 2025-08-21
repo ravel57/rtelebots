@@ -11,7 +11,7 @@ public class SentWebAppMessage implements Serializable {
 
 	private final static long serialVersionUID = 0L;
 
-	private String inline_message_id;
+	private final String inline_message_id;
 
 	public SentWebAppMessage() {
 		this.inline_message_id = null;

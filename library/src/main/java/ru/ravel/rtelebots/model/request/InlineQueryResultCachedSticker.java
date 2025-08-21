@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class InlineQueryResultCachedSticker extends InlineQueryResult<InlineQueryResultCachedSticker> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String sticker_file_id;
+	private final String sticker_file_id;
 
 	public InlineQueryResultCachedSticker(String id, String fileId) {
 		super("sticker", id);

@@ -1,6 +1,7 @@
 package ru.ravel.rtelebots.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Stas Parshin
@@ -35,8 +36,8 @@ public class BotCommand implements Serializable {
 
 		BotCommand that = (BotCommand) o;
 
-		if (command != null ? !command.equals(that.command) : that.command != null) return false;
-		return description != null ? description.equals(that.description) : that.description == null;
+		if (!Objects.equals(command, that.command)) return false;
+		return Objects.equals(description, that.description);
 	}
 
 	@Override

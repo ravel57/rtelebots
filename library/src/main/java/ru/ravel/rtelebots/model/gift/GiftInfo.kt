@@ -7,7 +7,7 @@ data class GiftInfo(
 	@get:JvmName("prepaidUpgradeStarCount") val prepaidUpgradeStarCount: Int?,
 	@get:JvmName("canBeUpgraded") val canBeUpgraded: Boolean?,
 	@get:JvmName("text") val text: String?,
-	@get:JvmName("entities") val entities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>?,
+	@get:JvmName("entities") val entities: Array<ru.ravel.rtelebots.model.MessageEntity>?,
 	@get:JvmName("isPrivate") val isPrivate: Boolean?,
 ) {
 

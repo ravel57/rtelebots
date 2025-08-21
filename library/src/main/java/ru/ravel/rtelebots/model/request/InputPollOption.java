@@ -10,7 +10,7 @@ public class InputPollOption implements Serializable {
 
 	private final static long serialVersionUID = 0L;
 
-	private String text;
+	private final String text;
 	private String text_parse_mode;
 	private MessageEntity[] text_entities;
 

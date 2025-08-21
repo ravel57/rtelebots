@@ -20,8 +20,8 @@ class SendDocument private constructor(
 	contentFile = documentFile,
 	contentBytes = documentBytes,
 
-	defaultFileName = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.DOC_FILE_NAME,
-	defaultContentType = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.DOC_MIME_TYPE
+	defaultFileName = ContentTypes.DOC_FILE_NAME,
+	defaultContentType = ContentTypes.DOC_MIME_TYPE
 ) {
 
 
@@ -92,20 +92,20 @@ class SendDocument private constructor(
 	}
 
 	var caption: String? by optionalRequestParameter()
-	var parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
-	var captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var parseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
+	var captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
 
 	var disableContentTypeDetection: Boolean? by optionalRequestParameter()
 
 	fun caption(caption: String) = applySelf { this.caption = caption }
 
-	fun parseMode(parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) =
+	fun parseMode(parseMode: ru.ravel.rtelebots.model.request.ParseMode) =
 		applySelf { this.parseMode = parseMode }
 
-	fun captionEntities(captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun captionEntities(captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>) =
 		applySelf { this.captionEntities = captionEntities }
 
-	fun captionEntities(vararg captionEntities: _root_ide_package_.ru.ravel.rtelebots.model.MessageEntity) =
+	fun captionEntities(vararg captionEntities: ru.ravel.rtelebots.model.MessageEntity) =
 		captionEntities(captionEntities.toList())
 
 	fun disableContentTypeDetection(disableContentTypeDetection: Boolean) =

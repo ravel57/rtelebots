@@ -6,7 +6,7 @@ import ru.ravel.rtelebots.model.gift.Gift
 class OwnedGiftUnique(
 	@get:JvmName("gift") val gift: Gift,
 	@get:JvmName("ownedGiftId") var ownedGiftId: String?,
-	@get:JvmName("senderUser") var senderUser: _root_ide_package_.ru.ravel.rtelebots.model.User?,
+	@get:JvmName("senderUser") var senderUser: ru.ravel.rtelebots.model.User?,
 	@get:JvmName("sendDate") var sendDate: Long,
 	@get:JvmName("isSaved") var isSaved: Boolean?,
 	@get:JvmName("canBeTransferred") var canBeTransferred: Boolean?,

@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class InlineQueryResultCachedAudio extends InlineQueryResult<InlineQueryResultCachedAudio> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String audio_file_id;
+	private final String audio_file_id;
 
 	private String caption;
 	private String parse_mode;

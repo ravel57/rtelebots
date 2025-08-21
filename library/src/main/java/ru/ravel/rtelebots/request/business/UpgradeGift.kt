@@ -10,7 +10,7 @@ class UpgradeGift private constructor(
 	ownedGiftId: String,
 	keepOriginalDetails: Boolean?,
 	starCount: Int?
-) : KBaseRequest<UpgradeGift, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<UpgradeGift, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(businessConnectionId: String, ownedGiftId: String) : this(
 		businessConnectionId = businessConnectionId,

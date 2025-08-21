@@ -1,6 +1,7 @@
 package ru.ravel.rtelebots.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * stas
@@ -47,13 +48,13 @@ public class InlineQuery implements Serializable {
 
 		InlineQuery that = (InlineQuery) o;
 
-		if (id != null ? !id.equals(that.id) : that.id != null) return false;
-		if (from != null ? !from.equals(that.from) : that.from != null) return false;
-		if (location != null ? !location.equals(that.location) : that.location != null) return false;
-		if (query != null ? !query.equals(that.query) : that.query != null) return false;
-		if (chat_type != null ? !chat_type.equals(that.chat_type) : that.chat_type != null) return false;
+		if (!Objects.equals(id, that.id)) return false;
+		if (!Objects.equals(from, that.from)) return false;
+		if (!Objects.equals(location, that.location)) return false;
+		if (!Objects.equals(query, that.query)) return false;
+		if (!Objects.equals(chat_type, that.chat_type)) return false;
 
-		return offset != null ? offset.equals(that.offset) : that.offset == null;
+		return Objects.equals(offset, that.offset);
 	}
 
 	@Override

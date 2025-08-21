@@ -1,6 +1,7 @@
 package ru.ravel.rtelebots.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Stas Parshin
@@ -35,11 +36,11 @@ public class OrderInfo implements Serializable {
 
 		OrderInfo orderInfo = (OrderInfo) o;
 
-		if (name != null ? !name.equals(orderInfo.name) : orderInfo.name != null) return false;
-		if (phone_number != null ? !phone_number.equals(orderInfo.phone_number) : orderInfo.phone_number != null)
+		if (!Objects.equals(name, orderInfo.name)) return false;
+		if (!Objects.equals(phone_number, orderInfo.phone_number))
 			return false;
-		if (email != null ? !email.equals(orderInfo.email) : orderInfo.email != null) return false;
-		return shipping_address != null ? shipping_address.equals(orderInfo.shipping_address) : orderInfo.shipping_address == null;
+		if (!Objects.equals(email, orderInfo.email)) return false;
+		return Objects.equals(shipping_address, orderInfo.shipping_address);
 
 	}
 

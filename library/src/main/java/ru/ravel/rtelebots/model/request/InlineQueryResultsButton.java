@@ -8,7 +8,7 @@ public class InlineQueryResultsButton implements Serializable {
 
 	private final static long serialVersionUID = 0L;
 
-	private String text;
+	private final String text;
 	private WebAppInfo web_app;
 	private String start_parameter;
 

@@ -20,8 +20,8 @@ class SendSticker private constructor(
 	contentFile = stickerFile,
 	contentBytes = stickerBytes,
 
-	defaultFileName = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.PHOTO_FILE_NAME,
-	defaultContentType = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.PHOTO_MIME_TYPE
+	defaultFileName = ContentTypes.PHOTO_FILE_NAME,
+	defaultContentType = ContentTypes.PHOTO_MIME_TYPE
 ) {
 
 	constructor(chatId: Long, stickerUrl: String) : this(

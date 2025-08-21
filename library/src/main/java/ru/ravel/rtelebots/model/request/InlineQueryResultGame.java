@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class InlineQueryResultGame extends InlineQueryResult<InlineQueryResultGame> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String game_short_name;
+	private final String game_short_name;
 
 	public InlineQueryResultGame(String id, String gameShortName) {
 		super("game", id);

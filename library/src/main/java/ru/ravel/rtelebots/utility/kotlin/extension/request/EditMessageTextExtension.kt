@@ -7,12 +7,12 @@ fun TelegramAware.editMessageText(
 	chatId: Long,
 	messageId: Int,
 	text: String,
-	modifier: _root_ide_package_.ru.ravel.rtelebots.request.EditMessageText.() -> Unit = {}
-) = this.execute(_root_ide_package_.ru.ravel.rtelebots.request.EditMessageText(chatId, messageId, text), modifier)
+	modifier: ru.ravel.rtelebots.request.EditMessageText.() -> Unit = {}
+) = this.execute(ru.ravel.rtelebots.request.EditMessageText(chatId, messageId, text), modifier)
 
 fun TelegramAware.editMessageText(
 	chatId: String,
 	messageId: Int,
 	text: String,
-	modifier: _root_ide_package_.ru.ravel.rtelebots.request.EditMessageText.() -> Unit = {}
-) = this.execute(_root_ide_package_.ru.ravel.rtelebots.request.EditMessageText(chatId, messageId, text), modifier)
+	modifier: ru.ravel.rtelebots.request.EditMessageText.() -> Unit = {}
+) = this.execute(ru.ravel.rtelebots.request.EditMessageText(chatId, messageId, text), modifier)

@@ -6,14 +6,14 @@ public class InputInvoiceMessageContent extends InputMessageContent implements S
 
 	private final static long serialVersionUID = 0L;
 
-	private String title;
-	private String description;
+	private final String title;
+	private final String description;
 
-	private String payload;
+	private final String payload;
 	private String provider_token;
 
-	private String currency;
-	private LabeledPrice[] prices;
+	private final String currency;
+	private final LabeledPrice[] prices;
 
 	private Integer max_tip_amount;
 	private Integer[] suggested_tip_amount;

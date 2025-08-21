@@ -10,7 +10,7 @@ class TransferGift private constructor(
 	ownedGiftId: String,
 	newOwnerChatId: Long,
 	starCount: Int?
-) : KBaseRequest<TransferGift, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<TransferGift, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(businessConnectionId: String, ownedGiftId: String, newOwnerChatId: Long) : this(
 		businessConnectionId = businessConnectionId,

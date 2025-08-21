@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class KeyboardButtonRequestUsers implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private Integer request_id;
+	private final Integer request_id;
 	private Boolean user_is_bot;
 	private Boolean user_is_premium;
 	private Integer max_quantity;

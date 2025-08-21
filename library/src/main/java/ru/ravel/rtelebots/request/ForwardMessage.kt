@@ -15,7 +15,7 @@ class ForwardMessage private constructor(
 	fromChannelUsername: String?,
 
 	messageId: Int
-) : KBaseRequest<ForwardMessage, _root_ide_package_.ru.ravel.rtelebots.response.SendResponse>(_root_ide_package_.ru.ravel.rtelebots.response.SendResponse::class) {
+) : KBaseRequest<ForwardMessage, ru.ravel.rtelebots.response.SendResponse>(ru.ravel.rtelebots.response.SendResponse::class) {
 
 	constructor(chatId: Long, fromChatId: Long, messageId: Int) : this(
 		chatId = chatId,

@@ -7,8 +7,8 @@ import java.io.Serializable;
 public class KeyboardButtonRequestChat implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private Integer request_id;
-	private Boolean chat_is_channel;
+	private final Integer request_id;
+	private final Boolean chat_is_channel;
 	private Boolean chat_is_forum;
 	private Boolean chat_has_username;
 	private Boolean chat_is_created;

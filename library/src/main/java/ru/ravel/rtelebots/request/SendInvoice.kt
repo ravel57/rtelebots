@@ -12,7 +12,7 @@ class SendInvoice private constructor(
 	description: String,
 	payload: String,
 	currency: String,
-	prices: List<_root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice>
+	prices: List<ru.ravel.rtelebots.model.request.LabeledPrice>
 ) : AbstractSendRequest<SendInvoice>(
 	chatId = chatId,
 	channelUsername = channelUsername,
@@ -24,7 +24,7 @@ class SendInvoice private constructor(
 		description: String,
 		payload: String,
 		currency: String,
-		prices: List<_root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice>
+		prices: List<ru.ravel.rtelebots.model.request.LabeledPrice>
 	) : this(
 		chatId = chatId,
 		channelUsername = null,
@@ -41,7 +41,7 @@ class SendInvoice private constructor(
 		description: String,
 		payload: String,
 		currency: String,
-		prices: List<_root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice>
+		prices: List<ru.ravel.rtelebots.model.request.LabeledPrice>
 	) : this(
 		chatId = null,
 		channelUsername = channelUsername,
@@ -62,7 +62,7 @@ class SendInvoice private constructor(
 		description: String,
 		payload: String,
 		currency: String,
-		vararg prices: _root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice
+		vararg prices: ru.ravel.rtelebots.model.request.LabeledPrice
 	) : this(
 		chatId = (chatId as? Number)?.toLong(),
 		channelUsername = chatId as? String,
@@ -79,7 +79,7 @@ class SendInvoice private constructor(
 	val description: String by requestParameter(description)
 	val payload: String by requestParameter(payload)
 	val currency: String by requestParameter(currency)
-	val prices: List<_root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice> by requestParameter(prices)
+	val prices: List<ru.ravel.rtelebots.model.request.LabeledPrice> by requestParameter(prices)
 
 	var providerToken: String? by optionalRequestParameter()
 	var providerData: String? by optionalRequestParameter()

@@ -7,7 +7,7 @@ public class BackgroundFillFreeformGradient extends BackgroundFill {
 
 	public static final String TYPE = "freeform_gradient";
 
-	private Integer[] colors;
+	private final Integer[] colors;
 
 	public BackgroundFillFreeformGradient(Integer... colors) {
 		super(TYPE);

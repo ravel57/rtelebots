@@ -4,7 +4,7 @@ import ru.ravel.rtelebots.model.gift.Gift
 import ru.ravel.rtelebots.model.stars.partner.TransactionPartnerType.CHAT
 
 data class TransactionPartnerChat(
-	@get:JvmName("chat") val chat: _root_ide_package_.ru.ravel.rtelebots.model.Chat,
+	@get:JvmName("chat") val chat: ru.ravel.rtelebots.model.Chat,
 	@get:JvmName("gift") val gift: Gift? = null
 ) : TransactionPartner {
 

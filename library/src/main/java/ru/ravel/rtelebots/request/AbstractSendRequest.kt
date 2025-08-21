@@ -8,7 +8,7 @@ import ru.ravel.rtelebots.utility.kotlin.optionalRequestParameter
 abstract class AbstractSendRequest<REQ : AbstractSendRequest<REQ>>(
 	chatId: Long?,
 	channelUsername: String?
-) : KBaseRequest<REQ, _root_ide_package_.ru.ravel.rtelebots.response.SendResponse>(_root_ide_package_.ru.ravel.rtelebots.response.SendResponse::class) {
+) : KBaseRequest<REQ, SendResponse>(SendResponse::class) {
 
 	val chatId: Long? by optionalRequestParameter(chatId, customParameterName = "chat_id")
 	val channelUsername: String? by optionalRequestParameter(channelUsername, customParameterName = "chat_id")
@@ -19,8 +19,8 @@ abstract class AbstractSendRequest<REQ : AbstractSendRequest<REQ>>(
 	var protectContent: Boolean? by optionalRequestParameter()
 	var allowPaidBroadcast: Boolean? by optionalRequestParameter()
 	var messageEffectId: String? by optionalRequestParameter()
-	var replyParameters: _root_ide_package_.ru.ravel.rtelebots.model.request.ReplyParameters? by optionalRequestParameter()
-	var replyMarkup: _root_ide_package_.ru.ravel.rtelebots.model.request.Keyboard? by optionalRequestParameter()
+	var replyParameters: ReplyParameters? by optionalRequestParameter()
+	var replyMarkup: Keyboard? by optionalRequestParameter()
 
 	fun businessConnectionId(businessConnectionId: String) = applySelf { this.businessConnectionId = businessConnectionId }
 
@@ -34,10 +34,10 @@ abstract class AbstractSendRequest<REQ : AbstractSendRequest<REQ>>(
 
 	fun messageEffectId(messageEffectId: String) = applySelf { this.messageEffectId = messageEffectId }
 
-	fun replyParameters(replyParameters: _root_ide_package_.ru.ravel.rtelebots.model.request.ReplyParameters) =
+	fun replyParameters(replyParameters: ReplyParameters) =
 		applySelf { this.replyParameters = replyParameters }
 
-	fun replyMarkup(replyMarkup: _root_ide_package_.ru.ravel.rtelebots.model.request.Keyboard) =
+	fun replyMarkup(replyMarkup: Keyboard) =
 		applySelf { this.replyMarkup = replyMarkup }
 
 }

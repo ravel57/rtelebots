@@ -9,9 +9,9 @@ import java.io.Serializable;
 public class InlineQueryResultMpeg4Gif extends InlineQueryResult<InlineQueryResultMpeg4Gif> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String mpeg4_url;
+	private final String mpeg4_url;
 
-	private String thumbnail_url;
+	private final String thumbnail_url;
 	private String thumbnail_mime_type;
 
 	private Integer mpeg4_width;

@@ -6,9 +6,9 @@ public class BackgroundFillGradient extends BackgroundFill {
 
 	public static final String TYPE = "gradient";
 
-	private Integer top_color;
-	private Integer bottom_color;
-	private Integer rotation_angle;
+	private final Integer top_color;
+	private final Integer bottom_color;
+	private final Integer rotation_angle;
 
 	public BackgroundFillGradient(Integer topColor, Integer bottomColor, Integer rotationAngle) {
 		super(TYPE);

@@ -9,8 +9,8 @@ import java.io.Serializable;
 public class LabeledPrice implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String label;
-	private Integer amount;
+	private final String label;
+	private final Integer amount;
 
 	public LabeledPrice(String label, Integer amount) {
 		this.label = label;

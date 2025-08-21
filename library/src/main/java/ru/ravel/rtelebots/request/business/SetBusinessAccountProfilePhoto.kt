@@ -10,7 +10,7 @@ class SetBusinessAccountProfilePhoto private constructor(
 	businessConnectionId: String,
 	photo: InputProfilePhoto,
 	isPublic: Boolean?
-) : KBaseRequest<SetBusinessAccountProfilePhoto, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<SetBusinessAccountProfilePhoto, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(businessConnectionId: String, photo: InputProfilePhoto) : this(
 		businessConnectionId = businessConnectionId,

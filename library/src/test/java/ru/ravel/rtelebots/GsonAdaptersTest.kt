@@ -12,7 +12,7 @@ class GsonAdaptersTest {
 
 	@Test
 	fun `all adapters fallback to base class`() {
-		val reflections = Reflections(_root_ide_package_.ru.ravel.rtelebots.TelegramBot::class.java.getPackage().name)
+		val reflections = Reflections(ru.ravel.rtelebots.TelegramBot::class.java.getPackage().name)
 		val adapters = reflections.getSubTypesOf(JsonDeserializer::class.java)
 		val types = adapters.map { (it.genericInterfaces[0] as ParameterizedType).actualTypeArguments[0] }
 		types.forEach {

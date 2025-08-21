@@ -7,14 +7,14 @@ package ru.ravel.rtelebots.model.request
 data class InlineKeyboardButton @JvmOverloads constructor(
 	@get:JvmName("text") var text: String? = null,
 	@get:JvmName("url") var url: String? = null,
-	@get:JvmName("loginUrl") var loginUrl: _root_ide_package_.ru.ravel.rtelebots.model.request.LoginUrl? = null,
+	@get:JvmName("loginUrl") var loginUrl: LoginUrl? = null,
 	@get:JvmName("callbackData") var callbackData: String? = null,
 	@get:JvmName("switchInlineQuery") var switchInlineQuery: String? = null,
 	@get:JvmName("switchInlineQueryCurrentChat") var switchInlineQueryCurrentChat: String? = null,
-	@get:JvmName("switchInlineQueryChosenChat") var switchInlineQueryChosenChat: _root_ide_package_.ru.ravel.rtelebots.model.request.SwitchInlineQueryChosenChat? = null,
+	@get:JvmName("switchInlineQueryChosenChat") var switchInlineQueryChosenChat: SwitchInlineQueryChosenChat? = null,
 	@get:JvmName("callbackGame") var callbackGame: CallbackGame? = null,
 	var pay: Boolean? = null,
-	@get:JvmName("webApp") var webApp: _root_ide_package_.ru.ravel.rtelebots.model.WebAppInfo? = null,
+	@get:JvmName("webApp") var webApp: ru.ravel.rtelebots.model.WebAppInfo? = null,
 	@get:JvmName("copyText") var copyText: CopyTextButton? = null,
 ) {
 
@@ -23,7 +23,7 @@ data class InlineKeyboardButton @JvmOverloads constructor(
 		return this
 	}
 
-	fun loginUrl(loginUrl: _root_ide_package_.ru.ravel.rtelebots.model.request.LoginUrl): InlineKeyboardButton {
+	fun loginUrl(loginUrl: LoginUrl): InlineKeyboardButton {
 		this.loginUrl = loginUrl
 		return this
 	}
@@ -43,7 +43,7 @@ data class InlineKeyboardButton @JvmOverloads constructor(
 		return this
 	}
 
-	fun switchInlineQueryChosenChat(switchInlineQueryChosenChat: _root_ide_package_.ru.ravel.rtelebots.model.request.SwitchInlineQueryChosenChat): InlineKeyboardButton {
+	fun switchInlineQueryChosenChat(switchInlineQueryChosenChat: SwitchInlineQueryChosenChat): InlineKeyboardButton {
 		this.switchInlineQueryChosenChat = switchInlineQueryChosenChat
 		return this
 	}
@@ -59,7 +59,7 @@ data class InlineKeyboardButton @JvmOverloads constructor(
 		return this
 	}
 
-	fun webApp(webApp: _root_ide_package_.ru.ravel.rtelebots.model.WebAppInfo): InlineKeyboardButton {
+	fun webApp(webApp: ru.ravel.rtelebots.model.WebAppInfo): InlineKeyboardButton {
 		this.webApp = webApp
 		return this
 	}

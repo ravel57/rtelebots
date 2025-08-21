@@ -9,9 +9,9 @@ import java.io.Serializable;
 public class InlineQueryResultGif extends InlineQueryResult<InlineQueryResultGif> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String gif_url;
+	private final String gif_url;
 
-	private String thumbnail_url;
+	private final String thumbnail_url;
 	private String thumbnail_mime_type;
 
 	private Integer gif_width;

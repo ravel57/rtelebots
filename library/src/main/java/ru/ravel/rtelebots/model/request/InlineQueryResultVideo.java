@@ -12,10 +12,10 @@ public class InlineQueryResultVideo extends InlineQueryResult<InlineQueryResultV
 	public static final String MIME_TEXT_HTML = "text/html";
 	public static final String MIME_VIDEO_MP4 = "video/mp4";
 
-	private String video_url;
-	private String mime_type;
-	private String thumbnail_url;
-	private String title;
+	private final String video_url;
+	private final String mime_type;
+	private final String thumbnail_url;
+	private final String title;
 
 	private String caption;
 	private String parse_mode;

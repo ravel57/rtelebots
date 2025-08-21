@@ -37,19 +37,19 @@ class SendMessage private constructor(
 
 	val text: String by requestParameter(text)
 
-	var parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
-	var entities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
-	var linkPreviewOptions: _root_ide_package_.ru.ravel.rtelebots.model.LinkPreviewOptions? by optionalRequestParameter()
+	var parseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
+	var entities: List<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var linkPreviewOptions: ru.ravel.rtelebots.model.LinkPreviewOptions? by optionalRequestParameter()
 
-	fun parseMode(parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) =
+	fun parseMode(parseMode: ru.ravel.rtelebots.model.request.ParseMode) =
 		applySelf { this.parseMode = parseMode }
 
-	fun entities(entities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun entities(entities: List<ru.ravel.rtelebots.model.MessageEntity>) =
 		applySelf { this.entities = entities }
 
-	fun entities(vararg entities: _root_ide_package_.ru.ravel.rtelebots.model.MessageEntity) = entities(entities.toList())
+	fun entities(vararg entities: ru.ravel.rtelebots.model.MessageEntity) = entities(entities.toList())
 
-	fun linkPreviewOptions(linkPreviewOptions: _root_ide_package_.ru.ravel.rtelebots.model.LinkPreviewOptions) =
+	fun linkPreviewOptions(linkPreviewOptions: ru.ravel.rtelebots.model.LinkPreviewOptions) =
 		applySelf { this.linkPreviewOptions = linkPreviewOptions }
 
 }

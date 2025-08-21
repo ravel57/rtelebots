@@ -1,11 +1,13 @@
 package ru.ravel.rtelebots.request
 
+import ru.ravel.rtelebots.response.MessageIdsResponse
+
 class CopyMessages(
 	chatId: Any,
 	fromChatId: Any,
 	messageIds: IntArray
-) : _root_ide_package_.ru.ravel.rtelebots.request.BaseRequest<CopyMessages, _root_ide_package_.ru.ravel.rtelebots.response.MessageIdsResponse>(
-	_root_ide_package_.ru.ravel.rtelebots.response.MessageIdsResponse::class.java
+) : BaseRequest<CopyMessages, MessageIdsResponse>(
+	ru.ravel.rtelebots.response.MessageIdsResponse::class.java
 ) {
 	init {
 		add("chat_id", chatId).add("from_chat_id", fromChatId).add("message_ids", messageIds)

@@ -15,6 +15,4 @@ data class BusinessBotRights(
 	@get:JvmName("canTransferAndUpgradeGifts") val canTransferAndUpgradeGifts: Boolean,
 	@get:JvmName("canTransferStars") val canTransferStars: Boolean,
 	@get:JvmName("canManageStories") val canManageStories: Boolean,
-) {
-
-}
+)

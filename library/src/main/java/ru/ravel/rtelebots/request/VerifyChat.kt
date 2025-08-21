@@ -5,7 +5,7 @@ import ru.ravel.rtelebots.utility.kotlin.optionalRequestParameter
 class VerifyChat private constructor(
 	chatId: Long?,
 	channelUsername: String?
-) : KBaseRequest<VerifyChat, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<VerifyChat, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(chatId: Long) : this(
 		chatId = chatId,

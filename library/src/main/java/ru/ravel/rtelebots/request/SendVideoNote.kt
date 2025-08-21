@@ -20,8 +20,8 @@ class SendVideoNote private constructor(
 	contentFile = videoNoteFile,
 	contentBytes = videoNoteBytes,
 
-	defaultFileName = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.VIDEO_FILE_NAME,
-	defaultContentType = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.VIDEO_MIME_TYPE
+	defaultFileName = ContentTypes.VIDEO_FILE_NAME,
+	defaultContentType = ContentTypes.VIDEO_MIME_TYPE
 ) {
 
 	constructor(chatId: Long, videoNoteUrl: String) : this(

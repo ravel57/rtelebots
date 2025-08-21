@@ -15,7 +15,7 @@ public class GetMyNameResponse extends BaseResponse {
 	@Override
 	public String toString() {
 		return "GetMyNameResponse{" +
-				"result=" + Objects.toString(result) +
+				"result=" + result +
 				'}';
 	}
 }

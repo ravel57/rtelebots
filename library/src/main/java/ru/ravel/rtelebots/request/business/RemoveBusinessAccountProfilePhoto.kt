@@ -8,8 +8,8 @@ import ru.ravel.rtelebots.utility.kotlin.requestParameter
 class RemoveBusinessAccountProfilePhoto private constructor(
 	businessConnectionId: String,
 	isPublic: Boolean?
-) : KBaseRequest<RemoveBusinessAccountProfilePhoto, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(
-	_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class
+) : KBaseRequest<RemoveBusinessAccountProfilePhoto, ru.ravel.rtelebots.response.BaseResponse>(
+	ru.ravel.rtelebots.response.BaseResponse::class
 ) {
 
 	constructor(businessConnectionId: String) : this(

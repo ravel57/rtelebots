@@ -5,10 +5,10 @@ import ru.ravel.rtelebots.utility.kotlin.extension.execute
 
 inline fun TelegramAware.getChat(
 	chatId: Long,
-	modifier: _root_ide_package_.ru.ravel.rtelebots.request.GetChat.() -> Unit = {}
-) = this.execute(_root_ide_package_.ru.ravel.rtelebots.request.GetChat(chatId), modifier)
+	modifier: ru.ravel.rtelebots.request.GetChat.() -> Unit = {}
+) = this.execute(ru.ravel.rtelebots.request.GetChat(chatId), modifier)
 
 inline fun TelegramAware.getChat(
 	chatId: String,
-	modifier: _root_ide_package_.ru.ravel.rtelebots.request.GetChat.() -> Unit = {}
-) = this.execute(_root_ide_package_.ru.ravel.rtelebots.request.GetChat(chatId), modifier)
+	modifier: ru.ravel.rtelebots.request.GetChat.() -> Unit = {}
+) = this.execute(ru.ravel.rtelebots.request.GetChat(chatId), modifier)

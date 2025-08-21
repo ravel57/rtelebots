@@ -5,11 +5,11 @@ import ru.ravel.rtelebots.utility.kotlin.extension.execute
 
 inline fun TelegramAware.answerPreCheckoutQuery(
 	preCheckoutId: String,
-	modifier: _root_ide_package_.ru.ravel.rtelebots.request.AnswerPreCheckoutQuery.() -> Unit = {}
-) = this.execute(_root_ide_package_.ru.ravel.rtelebots.request.AnswerPreCheckoutQuery(preCheckoutId), modifier)
+	modifier: ru.ravel.rtelebots.request.AnswerPreCheckoutQuery.() -> Unit = {}
+) = this.execute(ru.ravel.rtelebots.request.AnswerPreCheckoutQuery(preCheckoutId), modifier)
 
 inline fun TelegramAware.answerPreCheckoutQuery(
 	preCheckoutId: String,
 	errorMessage: String,
-	modifier: _root_ide_package_.ru.ravel.rtelebots.request.AnswerPreCheckoutQuery.() -> Unit = {}
-) = this.execute(_root_ide_package_.ru.ravel.rtelebots.request.AnswerPreCheckoutQuery(preCheckoutId, errorMessage), modifier)
+	modifier: ru.ravel.rtelebots.request.AnswerPreCheckoutQuery.() -> Unit = {}
+) = this.execute(ru.ravel.rtelebots.request.AnswerPreCheckoutQuery(preCheckoutId, errorMessage), modifier)

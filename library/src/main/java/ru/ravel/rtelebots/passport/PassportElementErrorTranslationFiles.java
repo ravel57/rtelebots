@@ -7,7 +7,7 @@ package ru.ravel.rtelebots.passport;
 public class PassportElementErrorTranslationFiles extends PassportElementError {
 	private final static long serialVersionUID = 0L;
 
-	private String[] file_hashes;
+	private final String[] file_hashes;
 
 	public PassportElementErrorTranslationFiles(String type, String[] fileHashes, String message) {
 		super("translation_files", type, message);

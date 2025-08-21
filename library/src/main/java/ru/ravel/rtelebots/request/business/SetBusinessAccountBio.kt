@@ -8,7 +8,7 @@ import ru.ravel.rtelebots.utility.kotlin.requestParameter
 class SetBusinessAccountBio private constructor(
 	businessConnectionId: String,
 	bio: String?
-) : KBaseRequest<SetBusinessAccountBio, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<SetBusinessAccountBio, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(businessConnectionId: String) : this(
 		businessConnectionId = businessConnectionId,

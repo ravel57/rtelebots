@@ -6,10 +6,10 @@ import ru.ravel.rtelebots.model.gift.Gift
 class OwnedGiftRegular private constructor(
 	@get:JvmName("gift") val gift: Gift,
 	@get:JvmName("ownedGiftId") var ownedGiftId: String?,
-	@get:JvmName("senderUser") var senderUser: _root_ide_package_.ru.ravel.rtelebots.model.User?,
+	@get:JvmName("senderUser") var senderUser: ru.ravel.rtelebots.model.User?,
 	@get:JvmName("sendDate") val sendDate: Long,
 	@get:JvmName("text") var text: String?,
-	@get:JvmName("entities") var entities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>?,
+	@get:JvmName("entities") var entities: Array<ru.ravel.rtelebots.model.MessageEntity>?,
 	@get:JvmName("isPrivate") var isPrivate: Boolean?,
 	@get:JvmName("isSaved") var isSaved: Boolean?,
 	@get:JvmName("canBeUpgraded") var canBeUpgraded: Boolean?,
@@ -41,7 +41,7 @@ class OwnedGiftRegular private constructor(
 		this.ownedGiftId = ownedGiftId
 	}
 
-	fun senderUser(senderUser: _root_ide_package_.ru.ravel.rtelebots.model.User) = apply {
+	fun senderUser(senderUser: ru.ravel.rtelebots.model.User) = apply {
 		this.senderUser = senderUser
 	}
 
@@ -49,7 +49,7 @@ class OwnedGiftRegular private constructor(
 		this.text = text
 	}
 
-	fun entities(entities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) = apply {
+	fun entities(entities: Array<ru.ravel.rtelebots.model.MessageEntity>) = apply {
 		this.entities = entities
 	}
 

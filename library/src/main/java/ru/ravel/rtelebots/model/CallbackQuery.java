@@ -3,6 +3,7 @@ package ru.ravel.rtelebots.model;
 import ru.ravel.rtelebots.model.message.MaybeInaccessibleMessage;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * Stas Parshin
@@ -71,15 +72,15 @@ public class CallbackQuery implements Serializable {
 
 		CallbackQuery that = (CallbackQuery) o;
 
-		if (id != null ? !id.equals(that.id) : that.id != null) return false;
-		if (from != null ? !from.equals(that.from) : that.from != null) return false;
-		if (message != null ? !message.equals(that.message) : that.message != null) return false;
-		if (inline_message_id != null ? !inline_message_id.equals(that.inline_message_id) : that.inline_message_id != null)
+		if (!Objects.equals(id, that.id)) return false;
+		if (!Objects.equals(from, that.from)) return false;
+		if (!Objects.equals(message, that.message)) return false;
+		if (!Objects.equals(inline_message_id, that.inline_message_id))
 			return false;
-		if (chat_instance != null ? !chat_instance.equals(that.chat_instance) : that.chat_instance != null)
+		if (!Objects.equals(chat_instance, that.chat_instance))
 			return false;
-		if (data != null ? !data.equals(that.data) : that.data != null) return false;
-		return game_short_name != null ? game_short_name.equals(that.game_short_name) : that.game_short_name == null;
+		if (!Objects.equals(data, that.data)) return false;
+		return Objects.equals(game_short_name, that.game_short_name);
 	}
 
 	@Override

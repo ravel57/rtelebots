@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class InlineQueryResultCachedPhoto extends InlineQueryResult<InlineQueryResultCachedPhoto> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String photo_file_id;
+	private final String photo_file_id;
 
 	private String title;
 	private String description;

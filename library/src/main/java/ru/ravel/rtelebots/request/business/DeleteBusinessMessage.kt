@@ -7,7 +7,7 @@ import ru.ravel.rtelebots.utility.kotlin.requestParameter
 class DeleteBusinessMessage(
 	businessConnectionId: String,
 	messageIds: Array<Int>
-) : KBaseRequest<DeleteBusinessMessage, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<DeleteBusinessMessage, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	val businessConnectionId: String by requestParameter(businessConnectionId, customParameterName = "business_connection_id")
 	val messageIds: Array<Int> by requestParameter(messageIds, customParameterName = "message_ids")

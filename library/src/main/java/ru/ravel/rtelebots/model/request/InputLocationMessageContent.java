@@ -9,8 +9,8 @@ import java.io.Serializable;
 public class InputLocationMessageContent extends InputMessageContent implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private Float latitude;
-	private Float longitude;
+	private final Float latitude;
+	private final Float longitude;
 	private Float horizontal_accuracy;
 	private Integer live_period;
 	private Integer heading;

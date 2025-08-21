@@ -4,7 +4,7 @@ package ru.ravel.rtelebots.utility.kotlin
 
 import ru.ravel.rtelebots.request.AbstractSendRequest
 
-typealias JavaInteger = java.lang.Integer
+typealias JavaInteger = Integer
 
 typealias JavaLong = java.lang.Long
 

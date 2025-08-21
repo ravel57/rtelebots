@@ -7,7 +7,7 @@ import ru.ravel.rtelebots.utility.kotlin.extension.execute
 inline fun TelegramAware.sendPoll(
 	chatId: Long,
 	question: String,
-	options: List<_root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption>,
+	options: List<ru.ravel.rtelebots.model.request.InputPollOption>,
 	modifier: SendPoll.() -> Unit = {}
 ) = this.execute(
 	SendPoll(
@@ -20,7 +20,7 @@ inline fun TelegramAware.sendPoll(
 inline fun TelegramAware.sendPoll(
 	chatId: Long,
 	question: String,
-	vararg options: _root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption,
+	vararg options: ru.ravel.rtelebots.model.request.InputPollOption,
 	modifier: SendPoll.() -> Unit = {}
 ) = this.sendPoll(
 	chatId = chatId,
@@ -33,7 +33,7 @@ inline fun TelegramAware.sendPoll(
 inline fun TelegramAware.sendPoll(
 	channelUsername: String,
 	question: String,
-	options: List<_root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption>,
+	options: List<ru.ravel.rtelebots.model.request.InputPollOption>,
 	modifier: SendPoll.() -> Unit = {}
 ) = this.execute(
 	SendPoll(
@@ -46,7 +46,7 @@ inline fun TelegramAware.sendPoll(
 inline fun TelegramAware.sendPoll(
 	channelUsername: String,
 	question: String,
-	vararg options: _root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption,
+	vararg options: ru.ravel.rtelebots.model.request.InputPollOption,
 	modifier: SendPoll.() -> Unit = {}
 ) = this.sendPoll(
 	channelUsername = channelUsername,

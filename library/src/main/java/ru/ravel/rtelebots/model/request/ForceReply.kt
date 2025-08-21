@@ -7,7 +7,7 @@ package ru.ravel.rtelebots.model.request
 data class ForceReply @JvmOverloads constructor(
 	@get:JvmName("selective") var selective: Boolean = false,
 	@get:JvmName("inputFieldPlaceholder") var inputFieldPlaceholder: String? = null
-) : _root_ide_package_.ru.ravel.rtelebots.model.request.Keyboard() {
+) : Keyboard() {
 	private val force_reply = true
 
 	fun inputFieldPlaceholder(inputFieldPlaceholder: String?): ForceReply {

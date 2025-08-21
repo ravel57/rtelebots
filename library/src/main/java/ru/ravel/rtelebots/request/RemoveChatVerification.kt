@@ -5,7 +5,7 @@ import ru.ravel.rtelebots.utility.kotlin.optionalRequestParameter
 class RemoveChatVerification(
 	chatId: Long?,
 	channelUsername: String?
-) : KBaseRequest<RemoveChatVerification, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<RemoveChatVerification, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(chatId: Long) : this(
 		chatId = chatId,

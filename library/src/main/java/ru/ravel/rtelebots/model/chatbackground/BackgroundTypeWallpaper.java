@@ -8,8 +8,8 @@ public class BackgroundTypeWallpaper extends BackgroundType {
 
 	public static final String TYPE = "wallpaper";
 
-	private Document document;
-	private Integer dark_theme_dimming;
+	private final Document document;
+	private final Integer dark_theme_dimming;
 	private Boolean is_blurred;
 	private Boolean is_moving;
 

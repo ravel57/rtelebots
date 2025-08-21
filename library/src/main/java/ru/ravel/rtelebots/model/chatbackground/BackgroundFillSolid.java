@@ -6,7 +6,7 @@ public class BackgroundFillSolid extends BackgroundFill {
 
 	public static final String TYPE = "solid";
 
-	private Integer color;
+	private final Integer color;
 
 	public BackgroundFillSolid(Integer color) {
 		super(TYPE);

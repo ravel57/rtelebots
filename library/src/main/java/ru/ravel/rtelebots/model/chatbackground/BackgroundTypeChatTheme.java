@@ -6,7 +6,7 @@ public class BackgroundTypeChatTheme extends BackgroundType {
 
 	public static final String TYPE = "chat_theme";
 
-	private String theme_name;
+	private final String theme_name;
 
 	public BackgroundTypeChatTheme(String themeName) {
 		super(TYPE);

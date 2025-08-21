@@ -54,7 +54,7 @@ class BotUtilsTest {
          }
          """.trimIndent()
 
-	private fun check(update: _root_ide_package_.ru.ravel.rtelebots.model.Update) {
+	private fun check(update: ru.ravel.rtelebots.model.Update) {
 		Assert.assertEquals(update.updateId(), 874199391)
 		Assert.assertEquals(update.message().messageId(), 33111)
 		Assert.assertEquals(update.message().usersShared().users()[0].userId(), 6111111111L)
@@ -63,13 +63,13 @@ class BotUtilsTest {
 
 	@Test
 	fun parseUpdateString() {
-		val update = _root_ide_package_.ru.ravel.rtelebots.utility.BotUtils.parseUpdate(updateStr)
+		val update = ru.ravel.rtelebots.utility.BotUtils.parseUpdate(updateStr)
 		check(update)
 	}
 
 	@Test
 	fun parseUpdateReader() {
-		val update = _root_ide_package_.ru.ravel.rtelebots.utility.BotUtils.parseUpdate(StringReader(updateStr))
+		val update = ru.ravel.rtelebots.utility.BotUtils.parseUpdate(StringReader(updateStr))
 		check(update)
 	}
 
@@ -77,22 +77,22 @@ class BotUtilsTest {
 	@Throws(IOException::class)
 	fun bytesFromInputStream() {
 		val src = byteArrayOf(1, 2, 3, 4)
-		val bytes = _root_ide_package_.ru.ravel.rtelebots.utility.BotUtils.getBytesFromInputStream(ByteArrayInputStream(src))
+		val bytes = ru.ravel.rtelebots.utility.BotUtils.getBytesFromInputStream(ByteArrayInputStream(src))
 		Assert.assertArrayEquals(bytes, src)
 	}
 
 	@Test
 	fun parseNull() {
 		Assert.assertNull(
-			_root_ide_package_.ru.ravel.rtelebots.utility.BotUtils.fromJson(
+			ru.ravel.rtelebots.utility.BotUtils.fromJson(
 				null,
-				_root_ide_package_.ru.ravel.rtelebots.response.SendResponse::class.java
+				ru.ravel.rtelebots.response.SendResponse::class.java
 			)
 		)
 		Assert.assertNull(
-			_root_ide_package_.ru.ravel.rtelebots.utility.BotUtils.fromJson(
+			ru.ravel.rtelebots.utility.BotUtils.fromJson(
 				"",
-				_root_ide_package_.ru.ravel.rtelebots.response.SendResponse::class.java
+				ru.ravel.rtelebots.response.SendResponse::class.java
 			)
 		)
 	}

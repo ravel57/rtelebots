@@ -14,7 +14,7 @@ class PostStory private constructor(
 	activePeriod: Int,
 	caption: String?,
 	parseMode: String?,
-	captionEntities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>?,
+	captionEntities: Array<ru.ravel.rtelebots.model.MessageEntity>?,
 	areas: Array<StoryArea>?,
 	postToChatPage: Boolean?,
 	protectContent: Boolean?
@@ -42,12 +42,12 @@ class PostStory private constructor(
 	var parseMode: String? by optionalRequestParameter(parseMode, customParameterName = "parse_mode")
 	fun parseMode(parseMode: String) = applySelf { this.parseMode = parseMode }
 
-	var captionEntities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter(
+	var captionEntities: Array<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter(
 		captionEntities,
 		customParameterName = "caption_entities"
 	)
 
-	fun captionEntities(captionEntities: Array<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun captionEntities(captionEntities: Array<ru.ravel.rtelebots.model.MessageEntity>) =
 		applySelf { this.captionEntities = captionEntities }
 
 	var areas: Array<StoryArea>? by optionalRequestParameter(areas, customParameterName = "areas")

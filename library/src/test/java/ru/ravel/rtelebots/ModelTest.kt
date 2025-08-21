@@ -31,13 +31,13 @@ class ModelTest {
 
 	@Before
 	fun setClasses() {
-		val modelPackage = _root_ide_package_.ru.ravel.rtelebots.model.Animation::class.java.getPackage().name
-		val passportPackage = _root_ide_package_.ru.ravel.rtelebots.passport.Credentials::class.java.getPackage().name
+		val modelPackage = ru.ravel.rtelebots.model.Animation::class.java.getPackage().name
+		val passportPackage = ru.ravel.rtelebots.passport.Credentials::class.java.getPackage().name
 		val packages = listOf(modelPackage, passportPackage)
 		val excludedPackages = listOf(
-			_root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode::class,
+			ru.ravel.rtelebots.model.request.ParseMode::class,
 			BotCommandScope::class,
-			_root_ide_package_.ru.ravel.rtelebots.passport.decrypt.Decrypt::class
+			ru.ravel.rtelebots.passport.decrypt.Decrypt::class
 		).map { it.java.`package`.name }
 
 		classes.addAll(Reflections(packages, SubTypesScanner(false))
@@ -50,12 +50,12 @@ class ModelTest {
 			})
 
 		// classes from model/request available in responses
-		classes.add(_root_ide_package_.ru.ravel.rtelebots.model.request.InlineKeyboardMarkup::class.java)
+		classes.add(ru.ravel.rtelebots.model.request.InlineKeyboardMarkup::class.java)
 		classes.add(InlineKeyboardButton::class.java)
 
-		customInstance[_root_ide_package_.ru.ravel.rtelebots.model.chatbackground.BackgroundTypeWallpaper::class.java] = {
-			_root_ide_package_.ru.ravel.rtelebots.model.chatbackground.BackgroundTypeWallpaper(
-				_root_ide_package_.ru.ravel.rtelebots.model.Document(),
+		customInstance[ru.ravel.rtelebots.model.chatbackground.BackgroundTypeWallpaper::class.java] = {
+			ru.ravel.rtelebots.model.chatbackground.BackgroundTypeWallpaper(
+				ru.ravel.rtelebots.model.Document(),
 				1
 			)
 		}
@@ -65,18 +65,18 @@ class ModelTest {
 	@Throws(ReflectiveOperationException::class)
 	fun testEquals() {
 		val prefabs = listOf<Any>(
-			_root_ide_package_.ru.ravel.rtelebots.model.CallbackQuery().apply {
+			ru.ravel.rtelebots.model.CallbackQuery().apply {
 				javaClass.getDeclaredField("id").apply { isAccessible = true }.set(this, "2")
 			},
-			_root_ide_package_.ru.ravel.rtelebots.model.Message().apply {
-				_root_ide_package_.ru.ravel.rtelebots.model.message.MaybeInaccessibleMessage::class.java.getDeclaredField("message_id")
+			ru.ravel.rtelebots.model.Message().apply {
+				ru.ravel.rtelebots.model.message.MaybeInaccessibleMessage::class.java.getDeclaredField("message_id")
 					.apply { isAccessible = true }
 					.set(this, 11)
 			},
-			_root_ide_package_.ru.ravel.rtelebots.model.Update().apply {
+			ru.ravel.rtelebots.model.Update().apply {
 				javaClass.getDeclaredField("update_id").apply { isAccessible = true }.set(this, 1)
 			},
-			_root_ide_package_.ru.ravel.rtelebots.model.Chat().apply {
+			ru.ravel.rtelebots.model.Chat().apply {
 				javaClass.getDeclaredField("id").apply { isAccessible = true }.set(this, 1L)
 			}
 		)
@@ -91,7 +91,7 @@ class ModelTest {
 				verifierApi.withPrefabValues(it.javaClass, it.javaClass.getDeclaredConstructor().newInstance(), it)
 			}
 
-			if (c == _root_ide_package_.ru.ravel.rtelebots.model.Message::class.java) {
+			if (c == ru.ravel.rtelebots.model.Message::class.java) {
 				verifierApi.withIgnoredFields("video_chat_started")
 				verifierApi.withIgnoredFields("forum_topic_closed")
 				verifierApi.withIgnoredFields("forum_topic_reopened")

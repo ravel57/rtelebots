@@ -1,6 +1,7 @@
 package ru.ravel.rtelebots.model;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 /**
  * stas
@@ -48,13 +49,13 @@ public class Document implements Serializable {
 
 		Document document = (Document) o;
 
-		if (file_id != null ? !file_id.equals(document.file_id) : document.file_id != null) return false;
-		if (file_unique_id != null ? !file_unique_id.equals(document.file_unique_id) : document.file_unique_id != null)
+		if (!Objects.equals(file_id, document.file_id)) return false;
+		if (!Objects.equals(file_unique_id, document.file_unique_id))
 			return false;
-		if (thumbnail != null ? !thumbnail.equals(document.thumbnail) : document.thumbnail != null) return false;
-		if (file_name != null ? !file_name.equals(document.file_name) : document.file_name != null) return false;
-		if (mime_type != null ? !mime_type.equals(document.mime_type) : document.mime_type != null) return false;
-		return file_size != null ? file_size.equals(document.file_size) : document.file_size == null;
+		if (!Objects.equals(thumbnail, document.thumbnail)) return false;
+		if (!Objects.equals(file_name, document.file_name)) return false;
+		if (!Objects.equals(mime_type, document.mime_type)) return false;
+		return Objects.equals(file_size, document.file_size);
 	}
 
 	@Override

@@ -9,8 +9,8 @@ import java.io.Serializable;
 public class InlineQueryResultPhoto extends InlineQueryResult<InlineQueryResultPhoto> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String photo_url;
-	private String thumbnail_url;
+	private final String photo_url;
+	private final String thumbnail_url;
 
 	private Integer photo_width;
 	private Integer photo_height;

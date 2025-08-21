@@ -9,10 +9,10 @@ import java.io.Serializable;
 public class InputVenueMessageContent extends InputMessageContent implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private Float latitude;
-	private Float longitude;
-	private String title;
-	private String address;
+	private final Float latitude;
+	private final Float longitude;
+	private final String title;
+	private final String address;
 	private String foursquare_id;
 	private String foursquare_type;
 	private String google_place_id;

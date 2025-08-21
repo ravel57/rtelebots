@@ -2,6 +2,7 @@ package ru.ravel.rtelebots.model;
 
 import java.io.Serializable;
 import java.util.Arrays;
+import java.util.Objects;
 
 /**
  * Stas Parshin
@@ -35,8 +36,8 @@ public class PollOption implements Serializable {
 
 		if (!Arrays.equals(text_entities, that.text_entities)) return false;
 
-		if (text != null ? !text.equals(that.text) : that.text != null) return false;
-		return voter_count != null ? voter_count.equals(that.voter_count) : that.voter_count == null;
+		if (!Objects.equals(text, that.text)) return false;
+		return Objects.equals(voter_count, that.voter_count);
 	}
 
 	@Override

@@ -6,8 +6,8 @@ public class BackgroundTypeFill extends BackgroundType {
 
 	public static final String TYPE = "fill";
 
-	private BackgroundFill fill;
-	private Integer dark_theme_dimming;
+	private final BackgroundFill fill;
+	private final Integer dark_theme_dimming;
 
 	public BackgroundTypeFill(BackgroundFill fill, Integer darkThemeDimming) {
 		super(TYPE);

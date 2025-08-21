@@ -13,5 +13,5 @@ data class Audio(
 	@get:JvmName("fileName") val fileName: String? = null,
 	@get:JvmName("mimeType") val mimeType: String? = null,
 	@get:JvmName("fileSize") val fileSize: Long? = null,
-	@get:JvmName("thumbnail") val thumbnail: _root_ide_package_.ru.ravel.rtelebots.model.PhotoSize? = null,
+	@get:JvmName("thumbnail") val thumbnail: PhotoSize? = null,
 )

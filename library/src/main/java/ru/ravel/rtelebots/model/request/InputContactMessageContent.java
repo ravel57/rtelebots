@@ -9,8 +9,8 @@ import java.io.Serializable;
 public class InputContactMessageContent extends InputMessageContent implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String phone_number;
-	private String first_name;
+	private final String phone_number;
+	private final String first_name;
 	private String last_name;
 	private String vcard;
 

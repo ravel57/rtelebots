@@ -12,8 +12,8 @@ public class InputSticker implements Serializable {
 
 	private final static long serialVersionUID = 0L;
 
-	private String sticker;
-	private String[] emoji_list;
+	private final String sticker;
+	private final String[] emoji_list;
 	private MaskPosition mask_position;
 	private String[] keywords;
 	private Sticker.Format format;

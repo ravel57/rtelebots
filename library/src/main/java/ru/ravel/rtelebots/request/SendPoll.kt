@@ -9,7 +9,7 @@ class SendPoll private constructor(
 	channelUsername: String? = null,
 
 	question: String,
-	options: List<_root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption>
+	options: List<ru.ravel.rtelebots.model.request.InputPollOption>
 ) : AbstractSendRequest<SendPoll>(
 	chatId = chatId,
 	channelUsername = channelUsername,
@@ -18,7 +18,7 @@ class SendPoll private constructor(
 	constructor(
 		chatId: Long,
 		question: String,
-		options: List<_root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption>
+		options: List<ru.ravel.rtelebots.model.request.InputPollOption>
 	) : this(
 		chatId = chatId,
 		channelUsername = null,
@@ -29,7 +29,7 @@ class SendPoll private constructor(
 	constructor(
 		channelUsername: String,
 		question: String,
-		options: List<_root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption>
+		options: List<ru.ravel.rtelebots.model.request.InputPollOption>
 	) : this(
 		chatId = null,
 		channelUsername = channelUsername,
@@ -41,7 +41,7 @@ class SendPoll private constructor(
 	constructor(
 		chatId: Any,
 		question: String,
-		vararg options: _root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption
+		vararg options: ru.ravel.rtelebots.model.request.InputPollOption
 	) : this(
 		chatId = (chatId as? Number)?.toLong(),
 		channelUsername = chatId as? String,
@@ -52,27 +52,27 @@ class SendPoll private constructor(
 	}
 
 	val question: String by requestParameter(question)
-	val options: List<_root_ide_package_.ru.ravel.rtelebots.model.request.InputPollOption> by requestParameter(options)
+	val options: List<ru.ravel.rtelebots.model.request.InputPollOption> by requestParameter(options)
 
-	var type: _root_ide_package_.ru.ravel.rtelebots.model.Poll.Type? by optionalRequestParameter()
+	var type: ru.ravel.rtelebots.model.Poll.Type? by optionalRequestParameter()
 	var typeRaw: String? by optionalRequestParameter(customParameterName = "type")
 
 	var isAnonymous: Boolean? by optionalRequestParameter()
 	var allowsMultipleAnswers: Boolean? by optionalRequestParameter()
 	var correctOptionId: Int? by optionalRequestParameter()
 
-	var questionParseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
-	var questionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var questionParseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
+	var questionEntities: List<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
 
 	var explanation: String? by optionalRequestParameter()
-	var explanationParseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
-	var explanationEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var explanationParseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
+	var explanationEntities: List<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
 
 	var openPeriod: Int? by optionalRequestParameter()
 	var closeDate: Long? by optionalRequestParameter()
 	var isClosed: Boolean? by optionalRequestParameter()
 
-	fun type(type: _root_ide_package_.ru.ravel.rtelebots.model.Poll.Type) = applySelf { this.type = type }
+	fun type(type: ru.ravel.rtelebots.model.Poll.Type) = applySelf { this.type = type }
 
 	fun type(typeRaw: String) = applySelf { this.typeRaw = typeRaw }
 
@@ -82,24 +82,24 @@ class SendPoll private constructor(
 
 	fun correctOptionId(correctOptionId: Int) = applySelf { this.correctOptionId = correctOptionId }
 
-	fun questionParseMode(questionParseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) =
+	fun questionParseMode(questionParseMode: ru.ravel.rtelebots.model.request.ParseMode) =
 		applySelf { this.questionParseMode = questionParseMode }
 
-	fun questionEntities(questionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun questionEntities(questionEntities: List<ru.ravel.rtelebots.model.MessageEntity>) =
 		applySelf { this.questionEntities = questionEntities }
 
-	fun questionEntities(vararg questionEntities: _root_ide_package_.ru.ravel.rtelebots.model.MessageEntity) =
+	fun questionEntities(vararg questionEntities: ru.ravel.rtelebots.model.MessageEntity) =
 		questionEntities(questionEntities.toList())
 
 	fun explanation(explanation: String) = applySelf { this.explanation = explanation }
 
-	fun explanationParseMode(explanationParseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) =
+	fun explanationParseMode(explanationParseMode: ru.ravel.rtelebots.model.request.ParseMode) =
 		applySelf { this.explanationParseMode = explanationParseMode }
 
-	fun explanationEntities(explanationEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun explanationEntities(explanationEntities: List<ru.ravel.rtelebots.model.MessageEntity>) =
 		applySelf { this.explanationEntities = explanationEntities }
 
-	fun explanationEntities(vararg explanationEntities: _root_ide_package_.ru.ravel.rtelebots.model.MessageEntity) =
+	fun explanationEntities(vararg explanationEntities: ru.ravel.rtelebots.model.MessageEntity) =
 		explanationEntities(explanationEntities.toList())
 
 	fun openPeriod(openPeriod: Int) = applySelf { this.openPeriod = openPeriod }

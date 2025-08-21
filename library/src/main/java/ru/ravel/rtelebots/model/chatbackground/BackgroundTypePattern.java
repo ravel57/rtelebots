@@ -8,9 +8,9 @@ public class BackgroundTypePattern extends BackgroundType {
 
 	public static final String TYPE = "pattern";
 
-	private Document document;
-	private BackgroundFill fill;
-	private Integer intensity;
+	private final Document document;
+	private final BackgroundFill fill;
+	private final Integer intensity;
 	private Boolean is_inverted;
 	private Boolean is_moving;
 

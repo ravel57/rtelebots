@@ -11,7 +11,7 @@ import java.io.Serializable;
 public class KeyboardButton implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String text;
+	private final String text;
 	private boolean request_contact;
 	private boolean request_location;
 	private KeyboardButtonPollType request_poll;

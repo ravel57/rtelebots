@@ -12,7 +12,7 @@ import java.io.Serializable;
 public class InputTextMessageContent extends InputMessageContent implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String message_text;
+	private final String message_text;
 	private String parse_mode;
 	private LinkPreviewOptions link_preview_options;
 	private Boolean disable_web_page_preview;

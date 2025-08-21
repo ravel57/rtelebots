@@ -9,8 +9,8 @@ import java.io.Serializable;
 public class InlineQueryResultCachedVoice extends InlineQueryResult<InlineQueryResultCachedVoice> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String voice_file_id;
-	private String title;
+	private final String voice_file_id;
+	private final String title;
 
 	private String caption;
 	private String parse_mode;

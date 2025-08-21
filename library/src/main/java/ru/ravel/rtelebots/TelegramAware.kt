@@ -1,9 +1,10 @@
 package ru.ravel.rtelebots
 
+import ru.ravel.rtelebots.request.BaseRequest
+import ru.ravel.rtelebots.response.BaseResponse
+
 interface TelegramAware {
 
-	fun <REQ : _root_ide_package_.ru.ravel.rtelebots.request.BaseRequest<REQ, RES>, RES : _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse> execute(
-		request: _root_ide_package_.ru.ravel.rtelebots.request.BaseRequest<REQ, RES>
-	): RES
+	fun <REQ : BaseRequest<REQ, RES>, RES : BaseResponse> execute(request: BaseRequest<REQ, RES>): RES
 
 }

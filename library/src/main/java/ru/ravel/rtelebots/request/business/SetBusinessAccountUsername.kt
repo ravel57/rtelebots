@@ -8,7 +8,7 @@ import ru.ravel.rtelebots.utility.kotlin.requestParameter
 class SetBusinessAccountUsername private constructor(
 	businessConnectionId: String,
 	username: String?
-) : KBaseRequest<SetBusinessAccountUsername, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<SetBusinessAccountUsername, ru.ravel.rtelebots.response.BaseResponse>(ru.ravel.rtelebots.response.BaseResponse::class) {
 
 	constructor(businessConnectionId: String) : this(
 		businessConnectionId = businessConnectionId,

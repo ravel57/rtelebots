@@ -9,10 +9,10 @@ import java.io.Serializable;
 public class InlineQueryResultVenue extends InlineQueryResult<InlineQueryResultVenue> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private float latitude;
-	private float longitude;
-	private String title;
-	private String address;
+	private final float latitude;
+	private final float longitude;
+	private final String title;
+	private final String address;
 
 	private String foursquare_id;
 	private String foursquare_type;

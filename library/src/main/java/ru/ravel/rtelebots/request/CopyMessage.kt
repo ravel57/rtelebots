@@ -13,7 +13,7 @@ class CopyMessage private constructor(
 	fromChannelUsername: String?,
 
 	messageId: Int
-) : KBaseRequest<CopyMessage, _root_ide_package_.ru.ravel.rtelebots.response.MessageIdResponse>(_root_ide_package_.ru.ravel.rtelebots.response.MessageIdResponse::class) {
+) : KBaseRequest<CopyMessage, ru.ravel.rtelebots.response.MessageIdResponse>(ru.ravel.rtelebots.response.MessageIdResponse::class) {
 
 	constructor(chatId: Long, fromChatId: Long, messageId: Int) : this(
 		chatId = chatId,
@@ -140,12 +140,12 @@ class CopyMessage private constructor(
 	var messageThreadId: Int? by optionalRequestParameter()
 
 	var caption: String? by optionalRequestParameter()
-	var parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
-	var captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var parseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
+	var captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
 
-	var replyParameters: _root_ide_package_.ru.ravel.rtelebots.model.request.ReplyParameters? by optionalRequestParameter()
+	var replyParameters: ru.ravel.rtelebots.model.request.ReplyParameters? by optionalRequestParameter()
 
-	var replyMarkup: _root_ide_package_.ru.ravel.rtelebots.model.request.Keyboard? by optionalRequestParameter()
+	var replyMarkup: ru.ravel.rtelebots.model.request.Keyboard? by optionalRequestParameter()
 	var showCaptionAboveMedia: Boolean? by optionalRequestParameter()
 	var disableNotification: Boolean? by optionalRequestParameter()
 	var protectContent: Boolean? by optionalRequestParameter()
@@ -156,19 +156,19 @@ class CopyMessage private constructor(
 
 	fun caption(caption: String) = applySelf { this.caption = caption }
 
-	fun parseMode(parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) =
+	fun parseMode(parseMode: ru.ravel.rtelebots.model.request.ParseMode) =
 		applySelf { this.parseMode = parseMode }
 
-	fun captionEntities(captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun captionEntities(captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>) =
 		applySelf { this.captionEntities = captionEntities }
 
-	fun captionEntities(vararg captionEntities: _root_ide_package_.ru.ravel.rtelebots.model.MessageEntity) =
+	fun captionEntities(vararg captionEntities: ru.ravel.rtelebots.model.MessageEntity) =
 		applySelf { this.captionEntities = captionEntities.toList() }
 
-	fun replyParameters(parameters: _root_ide_package_.ru.ravel.rtelebots.model.request.ReplyParameters) =
+	fun replyParameters(parameters: ru.ravel.rtelebots.model.request.ReplyParameters) =
 		applySelf { this.replyParameters = parameters }
 
-	fun replyMarkup(replyMarkup: _root_ide_package_.ru.ravel.rtelebots.model.request.Keyboard) =
+	fun replyMarkup(replyMarkup: ru.ravel.rtelebots.model.request.Keyboard) =
 		applySelf { this.replyMarkup = replyMarkup }
 
 	fun showCaptionAboveMedia(showCaptionAboveMedia: Boolean) = applySelf { this.showCaptionAboveMedia = showCaptionAboveMedia }

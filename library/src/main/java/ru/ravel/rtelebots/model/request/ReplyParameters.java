@@ -8,7 +8,7 @@ public class ReplyParameters implements Serializable {
 
 	private final static long serialVersionUID = 0L;
 
-	private Integer message_id;
+	private final Integer message_id;
 	private Object chat_id;
 	private Boolean allow_sending_without_reply;
 	private String quote;

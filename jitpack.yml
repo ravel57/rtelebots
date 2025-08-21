@@ -1,0 +1,7 @@
+jdk:
+  - openjdk8
+
+build:
+  commands:
+    - cd library
+    - ./gradlew build -x test

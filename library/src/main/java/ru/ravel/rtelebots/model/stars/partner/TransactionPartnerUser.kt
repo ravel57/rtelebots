@@ -6,10 +6,10 @@ import ru.ravel.rtelebots.model.stars.partner.TransactionPartnerType.USER
 
 data class TransactionPartnerUser(
 	@get:JvmName("transactionType") val transactionType: String,
-	@get:JvmName("user") val user: _root_ide_package_.ru.ravel.rtelebots.model.User,
+	@get:JvmName("user") val user: ru.ravel.rtelebots.model.User,
 	@get:JvmName("affiliate") val affiliate: AffiliateInfo,
 	@get:JvmName("invoicePayload") val invoicePayload: String? = null,
-	@get:JvmName("paidMedia") val paidMedia: Array<_root_ide_package_.ru.ravel.rtelebots.model.paidmedia.PaidMedia>? = null,
+	@get:JvmName("paidMedia") val paidMedia: Array<ru.ravel.rtelebots.model.paidmedia.PaidMedia>? = null,
 	@get:JvmName("paidMediaPayload") val paidMediaPayload: String? = null,
 	@get:JvmName("subscriptionPeriod") val subscriptionPeriod: Int? = null,
 	@get:JvmName("gift") val gift: Gift? = null,

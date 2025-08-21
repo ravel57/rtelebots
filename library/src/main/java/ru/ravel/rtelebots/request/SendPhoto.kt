@@ -20,8 +20,8 @@ class SendPhoto private constructor(
 	contentFile = photoFile,
 	contentBytes = photoBytes,
 
-	defaultFileName = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.PHOTO_FILE_NAME,
-	defaultContentType = _root_ide_package_.ru.ravel.rtelebots.request.ContentTypes.PHOTO_MIME_TYPE
+	defaultFileName = ContentTypes.PHOTO_FILE_NAME,
+	defaultContentType = ContentTypes.PHOTO_MIME_TYPE
 ) {
 
 	constructor(chatId: Long, photoUrl: String) : this(
@@ -91,20 +91,20 @@ class SendPhoto private constructor(
 	}
 
 	var caption: String? by optionalRequestParameter()
-	var parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
-	var captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
+	var parseMode: ru.ravel.rtelebots.model.request.ParseMode? by optionalRequestParameter()
+	var captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>? by optionalRequestParameter()
 	var showCaptionAboveMedia: Boolean? by optionalRequestParameter()
 	var hasSpoiler: Boolean? by optionalRequestParameter()
 
 	fun caption(caption: String) = applySelf { this.caption = caption }
 
-	fun parseMode(parseMode: _root_ide_package_.ru.ravel.rtelebots.model.request.ParseMode) =
+	fun parseMode(parseMode: ru.ravel.rtelebots.model.request.ParseMode) =
 		applySelf { this.parseMode = parseMode }
 
-	fun captionEntities(captionEntities: List<_root_ide_package_.ru.ravel.rtelebots.model.MessageEntity>) =
+	fun captionEntities(captionEntities: List<ru.ravel.rtelebots.model.MessageEntity>) =
 		applySelf { this.captionEntities = captionEntities }
 
-	fun captionEntities(vararg captionEntities: _root_ide_package_.ru.ravel.rtelebots.model.MessageEntity) =
+	fun captionEntities(vararg captionEntities: ru.ravel.rtelebots.model.MessageEntity) =
 		applySelf { this.captionEntities = captionEntities.toList() }
 
 	fun showCaptionAboveMedia(showCaptionAboveMedia: Boolean) = applySelf { this.showCaptionAboveMedia = showCaptionAboveMedia }

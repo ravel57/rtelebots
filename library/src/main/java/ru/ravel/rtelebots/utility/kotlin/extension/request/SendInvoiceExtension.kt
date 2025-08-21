@@ -10,7 +10,7 @@ fun TelegramAware.sendInvoice(
 	description: String,
 	payload: String,
 	currency: String,
-	items: List<_root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice>,
+	items: List<ru.ravel.rtelebots.model.request.LabeledPrice>,
 	modifier: SendInvoice.() -> Unit = {}
 ) = this.execute(
 	SendInvoice(
@@ -29,7 +29,7 @@ fun TelegramAware.sendInvoice(
 	description: String,
 	payload: String,
 	currency: String,
-	vararg items: _root_ide_package_.ru.ravel.rtelebots.model.request.LabeledPrice,
+	vararg items: ru.ravel.rtelebots.model.request.LabeledPrice,
 	modifier: SendInvoice.() -> Unit = {}
 ) = this.sendInvoice(
 	chatId = chatId,

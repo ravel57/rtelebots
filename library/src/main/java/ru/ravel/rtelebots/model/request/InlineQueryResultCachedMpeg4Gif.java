@@ -9,7 +9,7 @@ import java.io.Serializable;
 public class InlineQueryResultCachedMpeg4Gif extends InlineQueryResult<InlineQueryResultCachedMpeg4Gif> implements Serializable {
 	private final static long serialVersionUID = 0L;
 
-	private String mpeg4_file_id;
+	private final String mpeg4_file_id;
 
 	private String title;
 	private String caption;

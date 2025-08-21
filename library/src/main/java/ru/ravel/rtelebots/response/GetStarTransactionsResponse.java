@@ -15,7 +15,7 @@ public class GetStarTransactionsResponse extends BaseResponse {
 	@Override
 	public String toString() {
 		return "GetStarTransactionsResponse{" +
-				"result=" + Objects.toString(result) +
+				"result=" + result +
 				'}';
 	}
 }

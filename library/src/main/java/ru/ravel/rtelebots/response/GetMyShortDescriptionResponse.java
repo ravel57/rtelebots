@@ -15,7 +15,7 @@ public class GetMyShortDescriptionResponse extends BaseResponse {
 	@Override
 	public String toString() {
 		return "GetMyShortDescriptionResponse{" +
-				"result=" + Objects.toString(result) +
+				"result=" + result +
 				'}';
 	}
 }

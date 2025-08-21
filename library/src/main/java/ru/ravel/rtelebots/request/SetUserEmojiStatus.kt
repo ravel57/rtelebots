@@ -7,7 +7,7 @@ class SetUserEmojiStatus(
 	userId: Long,
 	emojiStatusCustomEmojiId: String,
 	emojiStatusExpirationDate: Int
-) : KBaseRequest<SetUserEmojiStatus, _root_ide_package_.ru.ravel.rtelebots.response.BaseResponse>(_root_ide_package_.ru.ravel.rtelebots.response.BaseResponse::class) {
+) : KBaseRequest<SetUserEmojiStatus, BaseResponse>(BaseResponse::class) {
 
 	val userId: Long by requestParameter(userId)
 	val emojiStatusCustomEmojiId: String by requestParameter(emojiStatusCustomEmojiId)
